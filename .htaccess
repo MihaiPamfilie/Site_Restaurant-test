@@ -1,0 +1,24 @@
+Options -Indexes
+
+IndexIgnore models controllers views
+
+# Wild chars ? (un singur caracter)  * (oricate caractere)
+# IndexIgnore *.jpg
+# IndexIgnore ba*er?.png
+
+RewriteEngine On
+RewriteRule ^([\w]+)$  ?page=$1 [L]
+
+# redirectarea pentru erorile 404 (Not found) si 403 (Access forbidden)
+
+ErrorDocument 404 /Curs_21/errors/error404.php
+ErrorDocument 403 /Curs_21/errors/error403.php
+
+# user si parola
+
+#AuthUserFile /Applications/XAMPP/xamppfiles/htdocs/Curs_21/.htpasswd
+#AuthType Basic
+#AuthName "User si parola"
+#Require valid-user
+
+
